@@ -1,0 +1,117 @@
+{
+ "files": [
+  {
+   "name": "__ia_thumb.jpg",
+   "source": "original",
+   "format": "Item Tile",
+   "size": "8975",
+   "mtime": "1769802324"
+  },
+  {
+   "name": "the_conceited_general-vobsub.zip",
+   "source": "original",
+   "format": "ZIP",
+   "size": "194477",
+   "mtime": "1211112218"
+  },
+  {
+   "name": "the_conceited_general.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "the_conceited_general.mpeg",
+   "size": "339806",
+   "mtime": "1228023760"
+  },
+  {
+   "name": "the_conceited_general.mpeg",
+   "source": "original",
+   "format": "MPEG2",
+   "height": "576",
+   "width": "768",
+   "length": "1417.92",
+   "size": "972523520",
+   "mtime": "1176122861",
+   "title": "The Conceited General"
+  },
+  {
+   "name": "the_conceited_general.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "the_conceited_general.mpeg",
+   "height": "304",
+   "width": "400",
+   "length": "1417.96",
+   "size": "100245035",
+   "mtime": "1228027722"
+  },
+  {
+   "name": "the_conceited_general.srt",
+   "source": "original",
+   "format": "SubRip",
+   "size": "5695",
+   "mtime": "1256507632"
+  },
+  {
+   "name": "the_conceited_general_512kb.mp4",
+   "source": "derivative",
+   "format": "512Kb MPEG4",
+   "original": "the_conceited_general.mpeg",
+   "height": "240",
+   "width": "320",
+   "length": "1417.96",
+   "size": "102997597",
+   "mtime": "1228026388"
+  },
+  {
+   "name": "the_conceited_general_archive.torrent",
+   "source": "metadata",
+   "format": "Archive BitTorrent",
+   "size": "25066",
+   "mtime": "1769802331"
+  },
+  {
+   "name": "the_conceited_general_files.xml",
+   "source": "metadata",
+   "format": "Metadata"
+  },
+  {
+   "name": "the_conceited_general_meta.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "2437",
+   "mtime": "1781624661"
+  },
+  {
+   "name": "the_conceited_general_reviews.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "2229",
+   "mtime": "1781624661"
+  }
+ ],
+ "files_count": 11,
+ "item_size": 1176504524,
+ "metadata": {
+  "identifier": "the_conceited_general",
+  "title": "The Conceited General (骄傲的将军)",
+  "mediatype": "movies",
+  "collection": [
+   "more_animation",
+   "animationandcartoons"
+  ],
+  "description": "A successful general returns home from battle to live in luxury. He drinks, stops practicing his skills and leaves his weapons to rust. He is arrogant and self-assured. When the enemy once again attacks he finds himself unable to defend himself or the country.\n\n<b>Subtitles:</b>\n<ul><li><a href=\"http://www.archive.org/download/the_conceited_general/the_conceited_general-vobsub.zip\" rel=\"ugc nofollow\">VobSub (Chinese Simplified & Traditional)</a></li>\n<li><a href=\"http://www.archive.org/download/the_conceited_general/the_conceited_general.srt\" rel=\"ugc nofollow\">English</a> (by Philip Jägenstedt)</li>\n</ul>",
+  "date": "1956",
+  "year": "1956",
+  "subject": "china;animation",
+  "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+  "publicdate": "2007-04-09 12:52:03",
+  "addeddate": "2007-04-09 12:50:52",
+  "director": "Te Wei (特伟)",
+  "publisher": "Shanghai Film Studio (上海电影制片厂)",
+  "sound": "sound",
+  "color": "color",
+  "runtime": "24 min",
+  "rights": "This work is made on mainland China in 1956. The copyright term for cinematographic works in China is 50 years, meaning that the copyright expered on Dembember 21, 2006.",
+  "language": "Mandarin Chinese"
+ }
+}

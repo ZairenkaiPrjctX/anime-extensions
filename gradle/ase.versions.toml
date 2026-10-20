@@ -1,0 +1,15 @@
+[versions]
+android-sdk-min = "24"
+android-sdk-compile = "34"
+android-sdk-target = "34"
+java = "11"
+
+# Extensions-lib API level every extension in this repository targets. Anikku accepts 12..16.
+extension-lib = "16"
+
+[plugins]
+android-base = { id = "ase.android.base" }
+extension = { id = "ase.extension" }
+library = { id = "ase.library" }
+multisrc = { id = "ase.multisrc" }
+spotless = { id = "ase.spotless" }

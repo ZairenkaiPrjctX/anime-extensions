@@ -1,0 +1,144 @@
+{
+ "files": [
+  {
+   "name": "AcrobattyBunny.asr.js",
+   "source": "original",
+   "format": "ASR",
+   "size": "15460",
+   "mtime": "1541131377"
+  },
+  {
+   "name": "AcrobattyBunny.asr.srt",
+   "source": "original",
+   "format": "SubRip",
+   "size": "2260",
+   "mtime": "1541131376"
+  },
+  {
+   "name": "AcrobattyBunny.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "AcrobattyBunny.mp4",
+   "size": "215569",
+   "mtime": "1334614150"
+  },
+  {
+   "name": "AcrobattyBunny.mp3",
+   "source": "derivative",
+   "format": "MP3",
+   "original": "AcrobattyBunny.mp4",
+   "height": "0",
+   "width": "0",
+   "length": "07:44",
+   "size": "5586444",
+   "mtime": "1540574539"
+  },
+  {
+   "name": "AcrobattyBunny.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "480",
+   "width": "640",
+   "length": "464.93",
+   "size": "69537573",
+   "mtime": "1334606567"
+  },
+  {
+   "name": "AcrobattyBunny.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "AcrobattyBunny.mp4",
+   "height": "300",
+   "width": "400",
+   "length": "464.86",
+   "size": "33828335",
+   "mtime": "1334615059"
+  },
+  {
+   "name": "AcrobattyBunny.png",
+   "source": "derivative",
+   "format": "PNG",
+   "original": "AcrobattyBunny.mp3",
+   "size": "12249",
+   "mtime": "1540574651"
+  },
+  {
+   "name": "congoJazz.asr.js",
+   "source": "original",
+   "format": "ASR",
+   "size": "7779",
+   "mtime": "1541131383"
+  },
+  {
+   "name": "congoJazz.asr.srt",
+   "source": "original",
+   "format": "SubRip",
+   "size": "1622",
+   "mtime": "1541131382"
+  },
+  {
+   "name": "congoJazz.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "congoJazz.mp4",
+   "size": "167822",
+   "mtime": "1334614256"
+  },
+  {
+   "name": "congoJazz.mp3",
+   "source": "derivative",
+   "format": "MP3",
+   "original": "congoJazz.mp4",
+   "height": "0",
+   "width": "0",
+   "length": "06:17",
+   "size": "4537782",
+   "mtime": "1540574574"
+  },
+  {
+   "name": "congoJazz.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "240",
+   "width": "352",
+   "length": "377.65",
+   "size": "40694091",
+   "mtime": "1334603414"
+  },
+  {
+   "name": "congoJazz.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "congoJazz.mp4",
+   "height": "300",
+   "width": "400",
+   "length": "377.61",
+   "size": "27720722",
+   "mtime": "1334615436"
+  },
+  {
+   "name": "congoJazz.png",
+   "source": "derivative",
+   "format": "PNG",
+   "original": "congoJazz.mp3",
+   "size": "12743",
+   "mtime": "1540574696"
+  }
+ ],
+ "files_count": 14,
+ "item_size": 407743268,
+ "metadata": {
+  "mediatype": "movies",
+  "collection": [
+   "vintage_cartoons",
+   "animationandcartoons"
+  ],
+  "title": "OldToonTheater",
+  "description": "Bosko The Talk-INK Kid 1929, Congo Jazz 1930, High and Flighty 1955, Acrobatty Bunny 1946, and Sinkin in the Bathtub 1930.",
+  "identifier": "OldToonTheater",
+  "addeddate": "2012-04-16 22:06:02",
+  "sound": "sound",
+  "color": "color",
+  "publicdate": "2012-04-16 22:47:52"
+ }
+}

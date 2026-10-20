@@ -1,0 +1,27 @@
+# Gradle / build output
+.gradle/
+.kotlin/
+build/
+/repo/
+/apk-artifacts/
+captures/
+
+# Local configuration and secrets — never commit
+local.properties
+signingkey.jks
+*.jks
+*.keystore
+*.p12
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Icon generator leftovers (see CONTRIBUTING.md)
+web_hi_res_512.png

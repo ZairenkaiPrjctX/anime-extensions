@@ -1,0 +1,250 @@
+{
+ "files": [
+  {
+   "name": "ED-1080-png.tar",
+   "source": "original",
+   "format": "TAR",
+   "size": "22273863680",
+   "mtime": "1215140459",
+   "title": "Complete collection of 1080p frames"
+  },
+  {
+   "name": "ED-360-png.tar",
+   "source": "original",
+   "format": "TAR",
+   "size": "3569858560",
+   "mtime": "1215090493",
+   "title": "Complete collection of 360p frames"
+  },
+  {
+   "name": "ED-CM-St-16bit.flac",
+   "source": "original",
+   "format": "Flac",
+   "height": "0",
+   "width": "0",
+   "length": "658.32",
+   "size": "59166432",
+   "mtime": "1215135667"
+  },
+  {
+   "name": "ElephantsDream.ffp",
+   "source": "derivative",
+   "format": "Flac FingerPrint",
+   "original": "ED-CM-St-16bit.flac",
+   "size": "381",
+   "mtime": "1215153569"
+  },
+  {
+   "name": "ElephantsDream.md5",
+   "source": "derivative",
+   "format": "Checksums",
+   "original": "ED-CM-St-16bit.flac",
+   "size": "388",
+   "mtime": "1215153569"
+  },
+  {
+   "name": "ElephantsDream_64kb.m3u",
+   "source": "derivative",
+   "format": "64Kbps M3U",
+   "original": "ED-CM-St-16bit_64kb.mp3",
+   "size": "507",
+   "mtime": "1215153611"
+  },
+  {
+   "name": "ElephantsDream_64kb_mp3.zip",
+   "source": "derivative",
+   "format": "64Kbps MP3 ZIP",
+   "original": "ED-CM-St-16bit_64kb.mp3",
+   "height": "0",
+   "width": "0",
+   "length": "4607.42",
+   "size": "36859330",
+   "mtime": "1215153606"
+  },
+  {
+   "name": "ElephantsDream_archive.torrent",
+   "source": "metadata",
+   "format": "Archive BitTorrent",
+   "size": "151118",
+   "mtime": "1760323777"
+  },
+  {
+   "name": "ElephantsDream_files.xml",
+   "source": "metadata",
+   "format": "Metadata"
+  },
+  {
+   "name": "ElephantsDream_meta.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "5688",
+   "mtime": "1760323776"
+  },
+  {
+   "name": "ElephantsDream_reviews.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "6399",
+   "mtime": "1760323776"
+  },
+  {
+   "name": "ElephantsDream_vbr.m3u",
+   "source": "derivative",
+   "format": "VBR M3U",
+   "original": "ED-CM-St-16bit_vbr.mp3",
+   "size": "500",
+   "mtime": "1215153612"
+  },
+  {
+   "name": "ElephantsDream_vbr_mp3.zip",
+   "source": "derivative",
+   "format": "VBR ZIP",
+   "original": "ED-CM-St-16bit_vbr.mp3",
+   "height": "0",
+   "width": "0",
+   "length": "7525.4",
+   "size": "52677768",
+   "mtime": "1215153598"
+  },
+  {
+   "name": "__ia_thumb.jpg",
+   "source": "original",
+   "format": "Item Tile",
+   "size": "4922",
+   "mtime": "1634269210"
+  },
+  {
+   "name": "ed_1024.avi",
+   "source": "original",
+   "format": "DivX",
+   "height": "576",
+   "width": "1024",
+   "length": "653.79",
+   "size": "445866736",
+   "mtime": "1215053956",
+   "title": "Elephants Dream"
+  },
+  {
+   "name": "ed_1024.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "ed_1024.avi",
+   "size": "232318",
+   "mtime": "1227501704"
+  },
+  {
+   "name": "ed_1024.mp4",
+   "source": "derivative",
+   "format": "h.264",
+   "original": "ed_1024.avi",
+   "height": "360",
+   "width": "640",
+   "length": "653.85",
+   "size": "67835590",
+   "mtime": "1414972466",
+   "title": "Elephants Dream"
+  },
+  {
+   "name": "ed_1024.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "ed_1024.avi",
+   "height": "304",
+   "width": "544",
+   "length": "653.79",
+   "size": "45617852",
+   "mtime": "1227502211"
+  },
+  {
+   "name": "ed_1024_512kb.mp4",
+   "source": "derivative",
+   "format": "512Kb MPEG4",
+   "original": "ed_1024.avi",
+   "height": "240",
+   "width": "426",
+   "length": "653.79",
+   "size": "47065346",
+   "mtime": "1227501607"
+  },
+  {
+   "name": "ed_hd.avi",
+   "source": "original",
+   "format": "DivX",
+   "height": "1080",
+   "width": "1920",
+   "length": "653.79",
+   "size": "854537054",
+   "mtime": "1215054502",
+   "title": "Elephants Dream"
+  },
+  {
+   "name": "ed_hd.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "ed_hd.avi",
+   "size": "231015",
+   "mtime": "1227498744"
+  },
+  {
+   "name": "ed_hd.mp4",
+   "source": "derivative",
+   "format": "h.264",
+   "original": "ed_hd.avi",
+   "height": "360",
+   "width": "640",
+   "length": "653.85",
+   "size": "67801890",
+   "mtime": "1414975419",
+   "title": "Elephants Dream"
+  },
+  {
+   "name": "ed_hd.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "ed_hd.avi",
+   "height": "304",
+   "width": "544",
+   "length": "653.79",
+   "size": "45657884",
+   "mtime": "1227500052"
+  },
+  {
+   "name": "ed_hd_512kb.mp4",
+   "source": "derivative",
+   "format": "512Kb MPEG4",
+   "original": "ed_hd.avi",
+   "height": "240",
+   "width": "426",
+   "length": "653.79",
+   "size": "47311688",
+   "mtime": "1227498507"
+  }
+ ],
+ "files_count": 24,
+ "item_size": 28056608869,
+ "metadata": {
+  "identifier": "ElephantsDream",
+  "title": "Elephants Dream",
+  "creator": "Orange Open Movie Project Studio",
+  "mediatype": "movies",
+  "collection": [
+   "more_animation",
+   "animationandcartoons"
+  ],
+  "description": "From <a href=\"http://elephantsdream.org/\" rel=\"ugc nofollow\">the official website</a>:\n\n\"Elephants Dream is the story of two strange characters exploring a capricious and seemingly infinite machine. The elder, Proog, acts as a tour-guide and protector, happily showing off the sights and dangers of the machine to his initially curious but increasingly skeptical protege Emo. As their journey unfolds we discover signs that the machine is not all Proog thinks it is, and his guiding takes on a more desperate aspect.\n\nElephants Dream is the world’s first open movie, made entirely with open source graphics software such as Blender, and with all production files freely available to use...\"\n\nIncluded in <a href=\"http://www.archive.org/download/ElephantsDream\" rel=\"ugc nofollow\">the files</a> are:\n<ul><li><a href=\"/download/ElephantsDream/ED-1080-png.tar\" rel=\"ugc nofollow\">1080p</a> and <a href=\"/download/ElephantsDream/ED-360-png.tar\" rel=\"ugc nofollow\">360p</a> sets of every frame of the movie in PNG format for re-compression or study</li>\n<li>Multiple <a href=\"http://flac.sourceforge.net/\" rel=\"ugc nofollow\">FLAC</a> encoded audio tracks (5.1 audio and a stereo 16-bit FLAC file)</li>\n<li><a href=\"/download/ElephantsDream/ed_1024.avi\" rel=\"ugc nofollow\">high-resolution</a> and <a href=\"/download/ElephantsDream/ed_hd.avi\" rel=\"ugc nofollow\">high definition</a> encodings of the movie</li></ul>",
+  "date": "2006",
+  "year": "2006",
+  "subject": "open;movie;surreal;animation",
+  "licenseurl": "http://creativecommons.org/licenses/by/3.0/us/",
+  "publicdate": "2008-07-04 03:38:29",
+  "addeddate": "2008-07-04 03:35:02",
+  "director": "Bassam Kurdali",
+  "publisher": "Orange Open Movie Project Studio",
+  "sound": "sound",
+  "color": "color",
+  "contact": "See <a href=\"http://elephantsdream.org/\">the official website</a> for more information.",
+  "credits": "See <a href=\"http://orange.blender.org/theteam\" rel=\"ugc nofollow\">the credits page on the official website</a> for credits and notes about the team.",
+  "rights": "© Copyright 2006, Blender Foundation / Netherlands Media Art Institute / <a href=\"http://www.elephantsdream.org/\" rel=\"ugc nofollow\">www.elephantsdream.org</a>\n\nThe movie “Elephants Dream” and all data on the DVDs and almost all of the contents on this website is licensed under the Creative Commons Attribution license. In short, this means you can freely reuse and distribute this content, also commercially, for as long you provide a proper attribution.\n\nThe attribution is either one of the following cases\n\n1) For the orange.blender.org website and files on the DVD ROMs:\nBlender Foundation | www.blender.org\n\n2) If you screen or broadcast the entire movie and/or documentary:\nInclude the entire credits roll in ending.\n\n3) If you re-use (or screen, broadcast) parts of the movie or documentary itself, or duplicate the DVDs:\n© copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org\n\n4) Some of the texture files on the DVDs have an own Creative Commons attribution, these are indicated clearly.\n\n5) The additional soundtrack audio files on this website are distributed under the Creative Commons Attribution-NonCommercial-NoDerivs 2.5 license. See the original announcement for details.\n\nThis is the first time such a large collection of files get launched under ‘the commons’, and therefore still a bit complex to grasp what to credit when exactly. The guidelines above are just meant to ensure that attribution happens in a reasonable way. If in doubt, use the third choice above.\n\nExcluded from the Creative Commons is:\n\n<ul><li>all logos on this website (including Blender logo, Orange logo, Creative Commons logo) and associated trademarks</li>\n<li>the DVD cover (inlay) and DVD disc print</li>\n</ul>\n\nExamples\n\nYou are free to duplicate the DVDs and distribute or sell them, but in that case you have to make your own cover art and DVD prints for it, with of course the proper attribution as mentioned above in 3).\n\nYou are free to broadcast the movie and documentary on your local TV station, just include the entire credits roll too.\n\nYou can re-edit parts of the movie into a video clip for your band, just include the attribution as mentioned above in 3).\n\nYou can use textures and .blend files (or models, rigs, etc) from the data collection on the DVDs, also in commercial projects. Just make sure we get our short credit as mentioned above in 1).\n\nYou can organize a screening in a cinema, and charge an entrance fee for it. Just include the movie credits in the screening.\n\nYou can submit the movie to festivals even! Festivals can also screen the movie without our permission. It would be nice though to get a notification for it, especially when we win prizes! :)",
+  "language": "English"
+ }
+}

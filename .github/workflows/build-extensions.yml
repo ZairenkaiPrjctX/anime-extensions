@@ -1,0 +1,114 @@
+name: Build extensions
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      modules:
+        description: "Comma-separated <lang>:<name> modules to build, or 'all'"
+        required: true
+        default: all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    name: Resolve affected modules
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      count: ${{ steps.matrix.outputs.count }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Compute build matrix
+        id: matrix
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+          BEFORE: ${{ github.event.before }}
+          MODULES: ${{ inputs.modules }}
+        run: |
+          case "$EVENT" in
+            pull_request)
+              python3 tools/build_matrix.py --base "origin/$BASE_REF" ;;
+            push)
+              if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE^{commit}"; then
+                python3 tools/build_matrix.py --all
+              else
+                python3 tools/build_matrix.py --base "$BEFORE"
+              fi ;;
+            workflow_dispatch)
+              if [ "$MODULES" = "all" ]; then
+                python3 tools/build_matrix.py --all
+              else
+                python3 tools/build_matrix.py --modules "$MODULES"
+              fi ;;
+          esac
+
+      - name: Report empty matrix
+        if: steps.matrix.outputs.count == '0'
+        run: echo "::notice title=No extension builds::This change does not affect any extension module; nothing was built."
+
+  build:
+    name: Build ${{ matrix.module }}
+    needs: prepare
+    if: needs.prepare.outputs.count != '0'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    env:
+      CI: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+
+      - name: Check, test and assemble
+        env:
+          MODULE: ${{ matrix.module }}
+          SELECTION: ${{ matrix.lang }}:${{ matrix.name }}
+        run: ./gradlew -Pextensions="$SELECTION" --continue "$MODULE:spotlessCheck" "$MODULE:testDebugUnitTest" "$MODULE:assembleDebug"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ${{ matrix.artifact }}
+          path: src/${{ matrix.lang }}/${{ matrix.name }}/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: test-reports-${{ matrix.lang }}-${{ matrix.name }}
+          path: src/${{ matrix.lang }}/${{ matrix.name }}/build/reports/
+          retention-days: 7

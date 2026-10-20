@@ -1,0 +1,27 @@
+{
+ "responseHeader": {
+  "status": 0
+ },
+ "response": {
+  "numFound": 15884,
+  "start": 0,
+  "docs": [
+   {
+    "identifier": "ElephantsDream",
+    "title": "Elephants Dream"
+   },
+   {
+    "identifier": "Popeye_forPresident",
+    "title": "Popeye for President"
+   },
+   {
+    "identifier": "popeye_patriotic_popeye",
+    "title": "Patriotic Popeye"
+   },
+   {
+    "identifier": "Sintel",
+    "title": "Sintel"
+   }
+  ]
+ }
+}

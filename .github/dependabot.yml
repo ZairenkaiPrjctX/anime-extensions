@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # Keeps pinned action SHAs current. Gradle dependencies are updated by hand: several must stay
+  # compatible with what the host app provides at runtime (see gradle/libs.versions.toml).
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

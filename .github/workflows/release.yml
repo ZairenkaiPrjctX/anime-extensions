@@ -1,0 +1,150 @@
+name: Release
+
+# Builds every extension in release mode, generates the catalog and, when configured, publishes it
+# to the `repo` branch. Never runs for pull requests, so untrusted code never sees signing secrets.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Prepare release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+      count: ${{ steps.matrix.outputs.count }}
+      signed: ${{ steps.signing.outputs.signed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Compute build matrix (all modules)
+        id: matrix
+        run: python3 tools/build_matrix.py --all
+
+      - name: Detect release signing
+        id: signing
+        env:
+          HAS_KEY: ${{ secrets.SIGNING_KEY != '' && secrets.ALIAS != '' && secrets.KEY_STORE_PASSWORD != '' && secrets.KEY_PASSWORD != '' }}
+        run: |
+          echo "signed=$HAS_KEY" >> "$GITHUB_OUTPUT"
+          if [ "$HAS_KEY" != "true" ]; then
+            echo "::warning title=Artifact-only mode::Signing secrets are not configured; APKs are debug-signed and the catalog will not be published."
+          fi
+
+  build:
+    name: Release ${{ matrix.module }}
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: true
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    env:
+      CI: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+
+      - name: Write signing key
+        if: needs.prepare.outputs.signed == 'true'
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+        run: |
+          umask 077
+          printf '%s' "$SIGNING_KEY" | base64 --decode > signingkey.jks
+
+      - name: Test and assemble release APK
+        env:
+          MODULE: ${{ matrix.module }}
+          SELECTION: ${{ matrix.lang }}:${{ matrix.name }}
+          ALIAS: ${{ secrets.ALIAS }}
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: ./gradlew -Pextensions="$SELECTION" "$MODULE:testDebugUnitTest" "$MODULE:assembleRelease"
+
+      - name: Remove signing key
+        if: always()
+        run: rm -f signingkey.jks
+
+      - name: Upload APK
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: apk-release-${{ matrix.lang }}-${{ matrix.name }}
+          path: src/${{ matrix.lang }}/${{ matrix.name }}/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 30
+
+  catalog:
+    name: Catalog
+    needs: [prepare, build]
+    uses: ./.github/workflows/catalog.yml
+    with:
+      expected-count: ${{ needs.prepare.outputs.count }}
+      allow-debug-signing: ${{ needs.prepare.outputs.signed != 'true' }}
+
+  publish:
+    name: Publish catalog to the repo branch
+    needs: [prepare, catalog]
+    # Opt-in (repository variable PUBLISH_CATALOG=true), signed builds only, main branch only.
+    if: >-
+      github.ref == 'refs/heads/main'
+      && vars.PUBLISH_CATALOG == 'true'
+      && needs.prepare.outputs.signed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Download catalog
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ${{ needs.catalog.outputs.artifact }}
+          path: catalog
+
+      - name: Publish as a single commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT: ${{ github.sha }}
+          SERVER: ${{ github.server_url }}
+        run: |
+          cd catalog
+          test -s index.min.json && test -s repo.json
+          git init --quiet --initial-branch=repo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit --quiet -m "Catalog built from ${COMMIT}" -m "Source: ${SERVER}/${REPOSITORY}/commit/${COMMIT}"
+          # Replace the whole branch atomically: the app never sees a partially updated catalog.
+          git push --quiet --force "https://x-access-token:${GH_TOKEN}@${SERVER#https://}/${REPOSITORY}.git" repo:repo
+          {
+            echo "### Catalog published"
+            echo "Add this repository in the app: \`https://raw.githubusercontent.com/${REPOSITORY}/repo/index.min.json\`"
+          } >> "$GITHUB_STEP_SUMMARY"

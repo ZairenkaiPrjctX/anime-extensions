@@ -1,0 +1,125 @@
+{
+ "files": [
+  {
+   "name": "Popeye The Sailor - A Clean Shaven Man.ia.mp4",
+   "source": "derivative",
+   "format": "h.264 IA",
+   "original": "Popeye The Sailor - A Clean Shaven Man.mp4",
+   "height": "360",
+   "width": "484",
+   "length": "179.26",
+   "size": "13505315",
+   "mtime": "1617332374"
+  },
+  {
+   "name": "Popeye The Sailor - A Clean Shaven Man.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "360",
+   "width": "484",
+   "length": "179.26",
+   "size": "13505315",
+   "mtime": "1617324134"
+  },
+  {
+   "name": "Popeye The Sailor - Baby Wants a Battleship.ia.mp4",
+   "source": "derivative",
+   "format": "h.264 IA",
+   "original": "Popeye The Sailor - Baby Wants a Battleship.mp4",
+   "height": "1440",
+   "width": "2960",
+   "length": "180.28",
+   "size": "91570121",
+   "mtime": "1617330962"
+  },
+  {
+   "name": "Popeye The Sailor - Baby Wants a Battleship.mkv",
+   "source": "original",
+   "format": "Matroska",
+   "height": "480",
+   "width": "640",
+   "length": "180.23",
+   "size": "11950172",
+   "mtime": "1617324352"
+  },
+  {
+   "name": "Popeye The Sailor - Baby Wants a Battleship.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "1440",
+   "width": "2960",
+   "length": "180.28",
+   "size": "91570121",
+   "mtime": "1617329967"
+  },
+  {
+   "name": "Popeye The Sailor - Blow Me Down.ia.mp4",
+   "source": "derivative",
+   "format": "h.264 IA",
+   "original": "Popeye The Sailor - Blow Me Down.mp4",
+   "height": "360",
+   "width": "504",
+   "length": "179.24",
+   "size": "13924278",
+   "mtime": "1617331034"
+  },
+  {
+   "name": "Popeye The Sailor - Blow Me Down.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "360",
+   "width": "504",
+   "length": "179.24",
+   "size": "13924278",
+   "mtime": "1617323991"
+  },
+  {
+   "name": "__ia_thumb.jpg",
+   "source": "original",
+   "format": "Item Tile",
+   "size": "8660",
+   "mtime": "1658097762"
+  },
+  {
+   "name": "popeye-collection_files.xml",
+   "source": "original",
+   "format": "Metadata"
+  },
+  {
+   "name": "popeye-collection_meta.sqlite",
+   "source": "original",
+   "format": "Metadata",
+   "size": "191488",
+   "mtime": "1617330115"
+  },
+  {
+   "name": "popeye-collection_meta.xml",
+   "source": "original",
+   "format": "Metadata",
+   "size": "679",
+   "mtime": "1659073636"
+  },
+  {
+   "name": "popeye-collection_reviews.xml",
+   "source": "original",
+   "format": "Metadata",
+   "size": "3460",
+   "mtime": "1756089105"
+  }
+ ],
+ "files_count": 12,
+ "item_size": 3522048334,
+ "metadata": {
+  "identifier": "popeye-collection",
+  "mediatype": "movies",
+  "collection": [
+   "vintage_cartoons",
+   "animationandcartoons"
+  ],
+  "description": "Popeye Collection",
+  "subject": "Popeye Collection",
+  "title": "Popeye Collection",
+  "publicdate": "2021-04-02 00:39:55",
+  "addeddate": "2021-04-02 00:39:55"
+ }
+}

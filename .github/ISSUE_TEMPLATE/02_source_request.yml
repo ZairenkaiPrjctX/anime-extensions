@@ -1,0 +1,36 @@
+name: Source request
+description: Propose a new source
+labels: [source request]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Site URL
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: How is the content accessed?
+      options:
+        - Official or documented public API
+        - Public feed / structured data
+        - Public server-rendered pages
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Rights and terms
+      description: Who provides the content and under which terms? Link the site's terms of use.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Requirements
+      options:
+        - label: Content is publicly accessible without circumventing DRM, paywalls, logins or CAPTCHAs.
+          required: true
+        - label: The site's terms permit automated access through the interface described above.
+          required: true

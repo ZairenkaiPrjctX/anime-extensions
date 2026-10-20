@@ -1,0 +1,82 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repository:
+    name: Repository tooling and metadata
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Tool unit tests
+        run: python3 -m unittest discover -s tools/tests -t tools/tests -v
+
+      - name: Validate extension metadata, docs and licensing files
+        run: python3 tools/validate_extensions.py
+
+      - name: Module discovery yields at least one extension
+        run: python3 tools/build_matrix.py --all
+
+      - name: Lint workflows
+        run: |
+          python3 -m pip install --quiet --user actionlint-py==1.7.12.25
+          "$(python3 -m site --user-base)/bin/actionlint" -color
+
+  gradle:
+    name: Formatting, shared-library tests, template smoke test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CI: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+
+      - name: Formatting (ktlint) and shared library tests
+        run: ./gradlew --continue spotlessCheck :core:testDebugUnitTest
+
+      - name: Generated source template compiles and passes its tests
+        run: |
+          python3 tools/new_source.py en templatesmoke --display-name "Template Smoke" --base-url https://template-smoke.example
+          ./gradlew -Pextensions=en:templatesmoke :src:en:templatesmoke:spotlessCheck :src:en:templatesmoke:testDebugUnitTest :src:en:templatesmoke:assembleDebug
+          if python3 tools/validate_extensions.py --skip-repo-files; then
+            echo "::error::validate_extensions.py accepted an unimplemented scaffold"
+            exit 1
+          fi
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: validate-test-reports
+          path: "**/build/reports/tests/"
+          retention-days: 7

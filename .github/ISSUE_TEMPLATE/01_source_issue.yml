@@ -1,0 +1,31 @@
+name: Source issue
+description: An existing source shows wrong data, fails to load or cannot play videos
+labels: [bug]
+body:
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Name and version as shown in the app (e.g. Internet Archive 16.1)
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: App and version
+      description: e.g. Anikku 0.x.y
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the title/episode URL if relevant. Never paste cookies, tokens or account details.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behaviour
+    validations:
+      required: true

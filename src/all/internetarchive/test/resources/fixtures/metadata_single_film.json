@@ -1,0 +1,112 @@
+{
+ "files": [
+  {
+   "name": "Popeye_forPresident.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "Popeye_forPresident.mpeg",
+   "size": "182548",
+   "mtime": "1227900387"
+  },
+  {
+   "name": "Popeye_forPresident.mpeg",
+   "source": "original",
+   "format": "MPEG2",
+   "height": "480",
+   "width": "640",
+   "length": "370.2",
+   "size": "179044352",
+   "mtime": "1139091414",
+   "title": "Popeye for President"
+  },
+  {
+   "name": "Popeye_forPresident.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "Popeye_forPresident.mpeg",
+   "height": "304",
+   "width": "400",
+   "length": "370.3",
+   "size": "26138707",
+   "mtime": "1227901242"
+  },
+  {
+   "name": "Popeye_forPresident.thumbs/Popeye_forPresident_000001.jpg",
+   "source": "derivative",
+   "format": "Thumbnail",
+   "original": "Popeye_forPresident.mpeg",
+   "size": "1141",
+   "mtime": "1227900308"
+  },
+  {
+   "name": "Popeye_forPresident_512kb.mp4",
+   "source": "derivative",
+   "format": "512Kb MPEG4",
+   "original": "Popeye_forPresident.mpeg",
+   "height": "240",
+   "width": "320",
+   "length": "370.3",
+   "size": "26989036",
+   "mtime": "1227900924"
+  },
+  {
+   "name": "Popeye_forPresident_archive.torrent",
+   "source": "metadata",
+   "format": "Archive BitTorrent",
+   "size": "11111",
+   "mtime": "1760323916"
+  },
+  {
+   "name": "Popeye_forPresident_files.xml",
+   "source": "metadata",
+   "format": "Metadata"
+  },
+  {
+   "name": "Popeye_forPresident_meta.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "1852",
+   "mtime": "1465318638"
+  },
+  {
+   "name": "Popeye_forPresident_reviews.xml",
+   "source": "metadata",
+   "format": "Metadata",
+   "size": "5596",
+   "mtime": "1760323913"
+  },
+  {
+   "name": "__ia_thumb.jpg",
+   "source": "original",
+   "format": "Item Tile",
+   "size": "9003",
+   "mtime": "1619142857"
+  }
+ ],
+ "files_count": 10,
+ "item_size": 232471760,
+ "metadata": {
+  "identifier": "Popeye_forPresident",
+  "title": "Popeye for President",
+  "creator": "Paramount Pictures",
+  "mediatype": "movies",
+  "collection": [
+   "more_animation",
+   "animationandcartoons"
+  ],
+  "description": "Popeye and Bluto are both running for president. They are tied with exactly the same number of votes, but Miss Olive Oyl has yet to cast her ballot. Which candidate will be able to impress her the most and earn her precious vote?",
+  "date": "1956",
+  "year": "1956",
+  "subject": "Classic cartoon; 1950s; Popeye",
+  "licenseurl": "http://creativecommons.org/licenses/publicdomain/",
+  "publicdate": "2006-02-04 16:59:33",
+  "addeddate": "2006-02-04 22:17:32",
+  "director": "Seymour Kneitel",
+  "publisher": "Famous Studios",
+  "sound": "mono",
+  "color": "color",
+  "runtime": "6:10",
+  "credits": "A Paramount Picture\n\nParamount Presents\nPopeye the Sailor\nColor by Technicolor\nBy Arrangement with King Features Syndicate Inc.\n\nA Famous Studios Production\n\nDirection: Seymour Kneitel\nAnimation: Tom Johnson, Frank Endres\nStory: Jack Mercer\nScenics: Robert Connavale\nMusic: Winston Sharples\nApproved MPAA\nCertificate No. 05849\nRCA Sound System\n\nPopeye for President\nCopyright (c) MCMLVI by Paramount Pictures Corporation\nAll Rights Reserved\n\nA Paramount Picture\nColor by Technicolor",
+  "language": "English"
+ }
+}

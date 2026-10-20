@@ -1,0 +1,100 @@
+name: Catalog
+
+# Reusable: turns release APK artifacts of one commit into a validated extension repository.
+on:
+  workflow_call:
+    inputs:
+      artifact-pattern:
+        description: Pattern of the APK artifacts to include
+        type: string
+        default: apk-release-*
+      expected-count:
+        description: Number of extension modules that were built
+        type: string
+        required: true
+      allow-debug-signing:
+        description: Accept debug-signed APKs (artifact-only mode without a release key)
+        type: boolean
+        default: false
+    outputs:
+      artifact:
+        description: Name of the uploaded catalog artifact
+        value: ${{ jobs.catalog.outputs.artifact }}
+
+permissions:
+  contents: read
+
+jobs:
+  catalog:
+    name: Generate and validate catalog
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      artifact: ${{ steps.names.outputs.artifact }}
+    steps:
+      - name: Checkout the commit the APKs were built from
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Java
+        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Download APK artifacts
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: ${{ inputs.artifact-pattern }}
+          path: ${{ runner.temp }}/apks
+          merge-multiple: true
+
+      - name: Every built module produced exactly one APK
+        env:
+          EXPECTED: ${{ inputs.expected-count }}
+          APKS: ${{ runner.temp }}/apks
+        run: |
+          found="$(find "$APKS" -name '*.apk' | wc -l)"
+          echo "Found $found APK(s), expected $EXPECTED"
+          if [ "$found" -ne "$EXPECTED" ] || [ "$found" -eq 0 ]; then
+            echo "::error::Expected $EXPECTED APK(s) but found $found; refusing to publish a partial catalog"
+            exit 1
+          fi
+
+      - name: Build extensions inspector (pinned commit)
+        run: tools/ci/build_inspector.sh "$RUNNER_TEMP/inspector.jar" "$RUNNER_TEMP/inspector-src"
+
+      - name: Inspect sources
+        run: java -jar "$RUNNER_TEMP/inspector.jar" "$RUNNER_TEMP/apks" "$RUNNER_TEMP/inspector.json" "$RUNNER_TEMP"
+
+      - name: Generate catalog
+        env:
+          ALLOW_DEBUG: ${{ inputs.allow-debug-signing }}
+          COMMIT: ${{ github.sha }}
+        run: |
+          extra=()
+          if [ "$ALLOW_DEBUG" = "true" ]; then extra+=(--allow-debug-signing); fi
+          python3 tools/generate_catalog.py \
+            --apk-dir "$RUNNER_TEMP/apks" \
+            --inspector-json "$RUNNER_TEMP/inspector.json" \
+            --output "$RUNNER_TEMP/repo" \
+            --commit "$COMMIT" \
+            "${extra[@]}"
+
+      - name: Validate catalog against this source tree
+        run: python3 tools/validate_catalog.py "$RUNNER_TEMP/repo" --source-tree .
+
+      - name: Name artifact
+        id: names
+        env:
+          COMMIT: ${{ github.sha }}
+        run: echo "artifact=catalog-${COMMIT}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload catalog
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ${{ steps.names.outputs.artifact }}
+          path: ${{ runner.temp }}/repo/
+          if-no-files-found: error
+          retention-days: 30

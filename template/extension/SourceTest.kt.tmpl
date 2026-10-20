@@ -1,0 +1,21 @@
+package {{PACKAGE}}
+
+import okhttp3.HttpUrl.Companion.toHttpUrl
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Test
+
+class {{CLASS_NAME}}Test {
+
+    @Test
+    fun `base URL is https, host-only and matches the rate-limited host`() {
+        val url = {{CLASS_NAME}}.BASE_URL.toHttpUrl()
+        assertTrue(url.isHttps)
+        assertEquals("/", url.encodedPath)
+        assertTrue("no trailing slash", !{{CLASS_NAME}}.BASE_URL.endsWith("/"))
+        assertEquals({{CLASS_NAME}}.HOST, url.host)
+    }
+
+    // Add fixture-backed parser tests here: record a sanitized response under
+    // test/resources/fixtures/ and assert on the mapped titles, URLs and episodes.
+}

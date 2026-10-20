@@ -1,0 +1,103 @@
+{
+ "files": [
+  {
+   "name": "TheHunt_archive.torrent",
+   "source": "metadata",
+   "format": "Archive BitTorrent",
+   "size": "7314",
+   "mtime": "1658326433",
+   "private": "true"
+  },
+  {
+   "name": "TheHunt_files.xml",
+   "source": "original",
+   "format": "Metadata"
+  },
+  {
+   "name": "TheHunt_meta.xml",
+   "source": "original",
+   "format": "Metadata",
+   "size": "1053",
+   "mtime": "1691530792"
+  },
+  {
+   "name": "TheHunt_reviews.xml",
+   "source": "original",
+   "format": "Metadata",
+   "size": "561",
+   "mtime": "1658326431"
+  },
+  {
+   "name": "__ia_thumb.jpg",
+   "source": "original",
+   "format": "Item Tile",
+   "size": "3349",
+   "mtime": "1621102460"
+  },
+  {
+   "name": "the_hunt_640.gif",
+   "source": "derivative",
+   "format": "Animated GIF",
+   "original": "the_hunt_640.mp4",
+   "size": "201172",
+   "mtime": "1303246361"
+  },
+  {
+   "name": "the_hunt_640.mp4",
+   "source": "original",
+   "format": "MPEG4",
+   "height": "480",
+   "width": "640",
+   "length": "456.53",
+   "size": "66408677",
+   "mtime": "1303246117",
+   "private": "true"
+  },
+  {
+   "name": "the_hunt_640.ogv",
+   "source": "derivative",
+   "format": "Ogg Video",
+   "original": "the_hunt_640.mp4",
+   "height": "304",
+   "width": "400",
+   "length": "456.5",
+   "size": "32122736",
+   "mtime": "1303247204",
+   "private": "true"
+  },
+  {
+   "name": "the_hunt_640_512kb.mp4",
+   "source": "derivative",
+   "format": "512Kb MPEG4",
+   "original": "the_hunt_640.mp4",
+   "height": "240",
+   "width": "320",
+   "length": "456.52",
+   "size": "38488109",
+   "mtime": "1303246852",
+   "private": "true"
+  }
+ ],
+ "files_count": 9,
+ "item_size": 137309763,
+ "metadata": {
+  "mediatype": "movies",
+  "collection": [
+   "more_animation",
+   "animationandcartoons",
+   "loggedin",
+   "deemphasize"
+  ],
+  "title": "The Hunt",
+  "description": "(2001)\nNominee for \"Best Direction\" Imagina2002\n4th Place \"Professional Animation\" Animago2002\nhttp://www.cee-gee.net",
+  "subject": "The Hunt; Marco Spitoni; cee-gee.net; nebadon2025",
+  "creator": "Marco Spitoni",
+  "runtime": "7:37",
+  "sound": "sound",
+  "identifier": "TheHunt",
+  "addeddate": "2011-04-19 20:49:38",
+  "publicdate": "2011-04-19 21:07:08",
+  "ia_orig__runtime": "7 minutes 37 seconds",
+  "access-restricted-item": "true"
+ }
+}
