@@ -17,6 +17,31 @@ reverse-engineering the repository. Background: [docs/ARCHITECTURE.md](docs/ARCH
 - **No TLS weakening**, no `Thread.sleep`, no hard-coded User-Agent (`headers` already carries the
   app's). `tools/validate_extensions.py` enforces several of these.
 
+## Source registry (before any code)
+
+Every candidate source gets an entry in [`sources/registry.json`](sources/registry.json) first,
+with evidence and a status:
+
+| Status            | Meaning                                                                 | Module allowed |
+|-------------------|-------------------------------------------------------------------------|----------------|
+| `READY`           | Access method and permission verified                                   | yes            |
+| `LIMITED`         | Usable with documented limits                                           | yes            |
+| `REVIEW_REQUIRED` | Licensing, terms or authorization unresolved — state the exact question | no             |
+| `BLOCKED`         | Cannot proceed under the applicable terms/restrictions                  | no             |
+| `UNREACHABLE`     | Could not be inspected (blocked, down)                                  | no             |
+
+Evidence means observations anyone can repeat (HTTP status, quoted terms, robots.txt rules), with
+the date. Do not infer licensing from a site's name or look. Entries are never deleted when a source
+fails review; they stay visible with their status. After editing:
+
+```bash
+python3 tools/source_registry.py validate
+python3 tools/source_registry.py render      # regenerates docs/SOURCE_AUDIT.md
+```
+
+CI rejects modules without an eligible entry, eligible entries without tests and fixtures, and a
+catalog that publishes anything else.
+
 ## Writing a source
 
 1. Scaffold it:
@@ -74,7 +99,7 @@ preserve ids on rename) is described in [docs/DISTRIBUTION.md](docs/DISTRIBUTION
 
 | Workflow           | Runs on                | Does                                                                  |
 |--------------------|------------------------|-----------------------------------------------------------------------|
-| `validate`         | PRs, pushes to `main`  | tool tests, metadata validation, actionlint, ktlint, core tests, template smoke build |
+| `validate`         | PRs, pushes to `main`  | tool tests, metadata and registry validation, audit-doc freshness, actionlint, ktlint, core tests, template smoke build |
 | `build-extensions` | PRs, pushes, manual    | builds/tests only affected modules (manual: chosen modules or `all`), uploads debug APKs |
 | `release`          | pushes to `main`, manual | release APKs of all modules → `catalog` → gated publish to `repo` branch |
 | `catalog`          | called by `release`    | inspector + catalog generation + validation                           |

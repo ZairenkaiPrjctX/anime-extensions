@@ -1,0 +1,11 @@
+{
+ "User": {
+  "Name": "asetest",
+  "Id": "328290fb6f9f433d8a11e4c866db48f3",
+  "HasPassword": true,
+  "HasConfiguredPassword": true,
+  "HasConfiguredEasyPassword": false,
+  "EnableAutoLogin": false
+ },
+ "AccessToken": "REDACTED"
+}

@@ -12,9 +12,14 @@ produces a validated extension catalog.
 
 ## Extensions
 
-| Module                                                    | Lang | Version | Data source                                   |
-|-----------------------------------------------------------|------|---------|-----------------------------------------------|
-| [`all.internetarchive`](src/all/internetarchive/README.md) | all  | 16.1    | Internet Archive public Search + Metadata API |
+| Module                                                    | Lang | Version | Data source                                            |
+|-----------------------------------------------------------|------|---------|--------------------------------------------------------|
+| [`all.internetarchive`](src/all/internetarchive/README.md) | all  | 16.1    | Internet Archive public Search + Metadata API          |
+| [`all.jellyfin`](src/all/jellyfin/README.md)               | all  | 16.1    | The user's own Jellyfin server (documented REST API)   |
+
+Every other audited or proposed source — including sites that were requested but cannot be
+integrated — is recorded with evidence and a status in the [source audit](docs/SOURCE_AUDIT.md)
+(generated from [`sources/registry.json`](sources/registry.json)).
 
 ## Install
 
@@ -39,6 +44,7 @@ Requirements, all commands and troubleshooting: [docs/DEVELOPMENT.md](docs/DEVEL
 
 ## Documentation
 
+- [Source audit](docs/SOURCE_AUDIT.md) — every audited source, its status, evidence and next action
 - [Architecture](docs/ARCHITECTURE.md) — modules, layering, core library, error semantics
 - [Compatibility](docs/COMPATIBILITY.md) — target app and API, how it was verified
 - [Development](docs/DEVELOPMENT.md) — commands, tests, troubleshooting

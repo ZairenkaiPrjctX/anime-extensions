@@ -44,6 +44,16 @@ Not verified here: installing the APK into a running Anikku build on a device (n
 development environment). This is the first item of the next milestone in
 [IMPLEMENTATION_PLAN.md](../IMPLEMENTATION_PLAN.md).
 
+## Source back ends (verified)
+
+| Source              | Back end and version verified                              | How                                   |
+|---------------------|------------------------------------------------------------|---------------------------------------|
+| `all.internetarchive` | archive.org Advanced Search + Metadata API (2026-10-20)   | recorded fixtures + opt-in live test  |
+| `all.jellyfin`      | Jellyfin Server 12.2.0 (official Linux build)              | recorded fixtures + opt-in live test against a local server |
+
+Other Jellyfin versions are expected to work through the same documented endpoints but were not
+tested; Emby compatibility is tracked in the source registry.
+
 ## Known API pitfalls (verified)
 
 | Pitfall                                                                                   | Consequence / rule                                                                   |
@@ -53,3 +63,4 @@ development environment). This is the first item of the next milestone in
 | `android.*` objects created in constructors throw `Stub!` in the inspector                  | Use `by lazy` (the client in `InternetArchive` is lazy)                              |
 | `Video.initialized` defaults to `false`                                                     | Set `initialized = true` for URLs that need no `resolveVideo`                         |
 | Changing a source's `name` or `lang` changes its generated `id`                             | Override `id` with the old value when renaming (see DISTRIBUTION.md)                  |
+| R8 strips Injekt's generic type tokens                                                      | Keep `FullTypeReference` subclasses (`common/proguard-rules.pro`); found by the inspector |

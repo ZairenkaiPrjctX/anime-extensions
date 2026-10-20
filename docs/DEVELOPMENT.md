@@ -32,6 +32,14 @@ ASE_LIVE_TESTS=1 ./gradlew -Pextensions=all:internetarchive :src:all:internetarc
 ./gradlew spotlessCheck
 ./gradlew spotlessApply          # rewrites files
 
+# Jellyfin live flow against a real server (opt-in)
+ASE_LIVE_TESTS=1 JELLYFIN_TEST_URL=http://127.0.0.1:8096 JELLYFIN_TEST_USER=… JELLYFIN_TEST_PASSWORD=… \
+  ./gradlew -Pextensions=all:jellyfin :src:all:jellyfin:testDebugUnitTest --tests '*LiveServerTest'
+
+# Source registry
+python3 tools/source_registry.py validate
+python3 tools/source_registry.py render --check
+
 # Repository tooling
 python3 -m unittest discover -s tools/tests -t tools/tests
 python3 tools/validate_extensions.py
@@ -74,3 +82,5 @@ trimmed; document each one in the module's `test/resources/fixtures/README.md`.
 | Spotless reports files under `build/`                                   | Targets exclude `**/build/**`; run tasks on the module, not a stale root config |
 | Unit test cannot call `SAnime.create()`                                 | Stubs throw `Stub!`; test the pure layer instead                         |
 | Inspector reports no sources                                            | Something `android.*` is created eagerly in the source; make it `by lazy` |
+| Inspector: `TypeReference constructed without actual type information`  | R8 stripped Injekt's generic type; keep `-keep class * extends uy.kohesive.injekt.api.FullTypeReference` (in `common/proguard-rules.pro`) |
+| Jellyfin JSON fields all null                                           | Send `Accept: application/json` (PascalCase); a wildcard Accept returns camelCase |

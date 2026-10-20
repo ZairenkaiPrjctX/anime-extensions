@@ -8,10 +8,19 @@ Repositori ekstensi sumber anime untuk aplikasi [Anikku](https://github.com/komi
 (dan aplikasi lain yang mendukung *extensions-lib* 16). Setiap sumber adalah satu modul Gradle dan
 menghasilkan satu APK.
 
-Saat ini tersedia satu sumber, **Internet Archive** (`src/all/internetarchive`), yang memakai API
-publik resmi archive.org untuk animasi/kartun. Kami tidak menambahkan situs Indonesia tertentu
-karena belum ada sumber yang aksesnya terverifikasi legal dan stabil; usulan sumber baru dapat
-diajukan melalui *issue* "Source request".
+Sumber yang tersedia:
+
+- **Internet Archive** (`src/all/internetarchive`) — API publik resmi archive.org untuk animasi/kartun.
+- **Jellyfin** (`src/all/jellyfin`) — server media Jellyfin milik Anda sendiri. Isi alamat server,
+  nama pengguna, dan kata sandi di pengaturan ekstensi.
+
+Enam situs anime Indonesia yang diminta (Sokuja, MiniOppai, Kuramanime, AnimeIndo, Kuronime,
+Nimegami) sudah diaudit satu per satu. Hasil, bukti, dan langkah selanjutnya untuk masing-masing
+ada di [docs/SOURCE_AUDIT.md](../SOURCE_AUDIT.md). Tidak satu pun saat ini memenuhi syarat untuk
+diintegrasikan: dua memblokir akses dari lingkungan audit, tiga menyatakan sendiri bahwa mereka
+tidak memegang hak atas video atau melarang penggunaan semacam ini dalam ketentuannya, dan satu
+masih memerlukan peninjauan ketentuan serta bukti lisensi. Usulan sumber baru dapat diajukan melalui
+*issue* "Source request".
 
 ## Menginstal ekstensi
 

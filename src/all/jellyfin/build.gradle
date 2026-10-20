@@ -1,0 +1,9 @@
+ext {
+    extName = 'Jellyfin'
+    extClass = '.Jellyfin'
+    extVersionCode = 1
+    libVersion = 16
+    isNsfw = false
+}
+
+apply plugin: 'ase.extension'

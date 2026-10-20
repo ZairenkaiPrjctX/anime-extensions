@@ -20,8 +20,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven(url = "https://jitpack.io") {
-            // Only the extension API stubs are resolved from JitPack.
-            content { includeGroup("com.github.komikku-app") }
+            // Only the extension API stubs and Injekt (both provided by the host app) come from JitPack.
+            content {
+                includeGroup("com.github.komikku-app")
+                includeGroup("com.github.null2264.injekt")
+            }
         }
     }
 }

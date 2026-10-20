@@ -130,6 +130,7 @@ def main(argv: list[str] | None = None) -> int:
         print(("would write " if args.dry_run else "wrote ") + str(path.relative_to(args.root.resolve())))
     if not args.dry_run:
         print(f"Next: ./gradlew -Pextensions={args.lang}:{args.name} :src:{args.lang}:{args.name}:compileDebugKotlin")
+        print("      and add a READY/LIMITED entry with evidence to sources/registry.json (see CONTRIBUTING.md)")
     return 0
 
 

@@ -1,0 +1,329 @@
+{
+ "Name": "The Conceited General",
+ "OriginalTitle": "骄傲的将军",
+ "Id": "7eff97ff8df4ecfda1c1cfdab3315fb1",
+ "DateCreated": "2026-10-20T15:59:31.0990997Z",
+ "CanDelete": true,
+ "CanDownload": true,
+ "HasSubtitles": true,
+ "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+ "SortName": "conceited general",
+ "PremiereDate": "1956-05-08T00:00:00.0000000Z",
+ "ExternalUrls": [
+  {
+   "Name": "IMDb",
+   "Url": "https://www.imdb.com/title/tt6824904"
+  },
+  {
+   "Name": "TMDB",
+   "Url": "https://www.themoviedb.org/movie/342442"
+  }
+ ],
+ "MediaSources": [
+  {
+   "Protocol": "File",
+   "Id": "7eff97ff8df4ecfda1c1cfdab3315fb1",
+   "Type": "Default",
+   "Container": "mp4",
+   "Size": 102997597,
+   "Name": "The Conceited General (1956)",
+   "IsRemote": false,
+   "RunTimeTicks": 14179600000,
+   "ReadAtNativeFramerate": false,
+   "IgnoreDts": false,
+   "IgnoreIndex": false,
+   "GenPtsInput": false,
+   "SupportsTranscoding": true,
+   "SupportsDirectStream": true,
+   "SupportsDirectPlay": true,
+   "IsInfiniteStream": false,
+   "UseMostCompatibleTranscodingProfile": false,
+   "RequiresOpening": false,
+   "RequiresClosing": false,
+   "RequiresLooping": false,
+   "SupportsProbing": true,
+   "VideoType": "VideoFile",
+   "MediaStreams": [
+    {
+     "Codec": "subrip",
+     "Language": "eng",
+     "TimeBase": "1/1000",
+     "VideoRange": "Unknown",
+     "VideoRangeType": "Unknown",
+     "AudioSpatialFormat": "None",
+     "LocalizedUndefined": "Undefined",
+     "LocalizedDefault": "Default",
+     "LocalizedForced": "Forced",
+     "LocalizedExternal": "External",
+     "LocalizedHearingImpaired": "Hearing Impaired",
+     "LocalizedLanguage": "English",
+     "DisplayTitle": "English - SUBRIP - External",
+     "IsInterlaced": false,
+     "IsDefault": false,
+     "IsForced": false,
+     "IsHearingImpaired": false,
+     "IsOriginal": false,
+     "Type": "Subtitle",
+     "Index": 0,
+     "Score": 111222,
+     "IsExternal": true,
+     "IsTextSubtitleStream": true,
+     "SupportsExternalStream": true
+    },
+    {
+     "Codec": "h264",
+     "CodecTag": "avc1",
+     "Language": "und",
+     "TimeBase": "1/25",
+     "VideoRange": "SDR",
+     "VideoRangeType": "SDR",
+     "AudioSpatialFormat": "None",
+     "DisplayTitle": "240p H264 SDR",
+     "NalLengthSize": "4",
+     "IsInterlaced": false,
+     "IsAVC": true,
+     "BitRate": 512270,
+     "BitDepth": 8,
+     "RefFrames": 1,
+     "IsDefault": true,
+     "IsForced": false,
+     "IsHearingImpaired": false,
+     "IsOriginal": false,
+     "Height": 240,
+     "Width": 320,
+     "AverageFrameRate": 25,
+     "RealFrameRate": 25,
+     "ReferenceFrameRate": 25,
+     "Profile": "Constrained Baseline",
+     "Type": "Video",
+     "AspectRatio": "4:3",
+     "Index": 1,
+     "IsExternal": false,
+     "IsTextSubtitleStream": false,
+     "SupportsExternalStream": false,
+     "PixelFormat": "yuv420p",
+     "Level": 13,
+     "IsAnamorphic": false
+    },
+    {
+     "Codec": "aac",
+     "CodecTag": "mp4a",
+     "Language": "und",
+     "TimeBase": "1/48000",
+     "VideoRange": "Unknown",
+     "VideoRangeType": "Unknown",
+     "AudioSpatialFormat": "None",
+     "LocalizedDefault": "Default",
+     "LocalizedExternal": "External",
+     "LocalizedLanguage": "Undetermined",
+     "LocalizedOriginal": "Original",
+     "DisplayTitle": "AAC - Stereo - Default",
+     "IsInterlaced": false,
+     "ChannelLayout": "stereo",
+     "BitRate": 64170,
+     "Channels": 2,
+     "SampleRate": 48000,
+     "IsDefault": true,
+     "IsForced": false,
+     "IsHearingImpaired": false,
+     "IsOriginal": false,
+     "Profile": "LC",
+     "Type": "Audio",
+     "Index": 2,
+     "IsExternal": false,
+     "IsTextSubtitleStream": false,
+     "SupportsExternalStream": false
+    }
+   ],
+   "MediaAttachments": [],
+   "Formats": [],
+   "Bitrate": 581102,
+   "RequiredHttpHeaders": {},
+   "TranscodingSubProtocol": "http",
+   "DefaultAudioStreamIndex": 2,
+   "DefaultSubtitleStreamIndex": 0,
+   "HasSegments": false
+  }
+ ],
+ "ProductionLocations": [
+  "China"
+ ],
+ "EnableMediaSourceDisplay": true,
+ "ChannelId": null,
+ "Overview": "After a victorious military campaign, a general returns home to glory and prosperity. The king rewards him and claims that all enemies will be intimidated by the general. From then on, the general no longer practice martial arts. He eats, drinks, lives the glamorous life, and didn't bother anymore with sharpening his weapons. When the enemy one day returns, his own arrogance led to his defeat and eventually to the downfall of whole nation.",
+ "Taglines": [],
+ "Genres": [
+  "Animation"
+ ],
+ "CommunityRating": 6.077,
+ "RunTimeTicks": 14179600000,
+ "PlayAccess": "Full",
+ "ProductionYear": 1956,
+ "RemoteTrailers": [],
+ "ProviderIds": {
+  "Tmdb": "342442",
+  "Imdb": "tt6824904"
+ },
+ "IsFolder": false,
+ "ParentId": "76505a0d608426b00e7b55f9ec115ac1",
+ "Type": "Movie",
+ "People": [
+  {
+   "Name": "Te Wei",
+   "Id": "3433f9696c9f88d8afb2bb682a32e0e8",
+   "Role": "Director",
+   "Type": "Director",
+   "PrimaryImageTag": "3f70f7b8d340eb774a1f0b684907d891",
+   "ImageBlurHashes": {
+    "Primary": {
+     "3f70f7b8d340eb774a1f0b684907d891": "dWFFjP4T%fxt00%fogM{NuxuIUbbxaIUtRofjcj?s:M{"
+    }
+   }
+  }
+ ],
+ "Studios": [
+  {
+   "Name": "Shanghai Animation Film Studio",
+   "Id": "dc811648f8ccf547224972013215b285"
+  }
+ ],
+ "GenreItems": [
+  {
+   "Name": "Animation",
+   "Id": "074229225b7254292f131f9f49f8dcd6"
+  }
+ ],
+ "LocalTrailerCount": 0,
+ "UserData": {
+  "PlaybackPositionTicks": 0,
+  "PlayCount": 0,
+  "IsFavorite": false,
+  "Played": false,
+  "Key": "342442",
+  "ItemId": "7eff97ff8df4ecfda1c1cfdab3315fb1"
+ },
+ "SpecialFeatureCount": 0,
+ "DisplayPreferencesId": "dbf7709c41faaa746463d67978eb863d",
+ "Tags": [],
+ "PrimaryImageAspectRatio": 0.7025,
+ "MediaStreams": [
+  {
+   "Codec": "subrip",
+   "Language": "eng",
+   "TimeBase": "1/1000",
+   "VideoRange": "Unknown",
+   "VideoRangeType": "Unknown",
+   "AudioSpatialFormat": "None",
+   "LocalizedUndefined": "Undefined",
+   "LocalizedDefault": "Default",
+   "LocalizedForced": "Forced",
+   "LocalizedExternal": "External",
+   "LocalizedHearingImpaired": "Hearing Impaired",
+   "LocalizedLanguage": "English",
+   "DisplayTitle": "English - SUBRIP - External",
+   "IsInterlaced": false,
+   "IsDefault": false,
+   "IsForced": false,
+   "IsHearingImpaired": false,
+   "IsOriginal": false,
+   "Type": "Subtitle",
+   "Index": 0,
+   "Score": 111222,
+   "IsExternal": true,
+   "IsTextSubtitleStream": true,
+   "SupportsExternalStream": true
+  },
+  {
+   "Codec": "h264",
+   "CodecTag": "avc1",
+   "Language": "und",
+   "TimeBase": "1/25",
+   "VideoRange": "SDR",
+   "VideoRangeType": "SDR",
+   "AudioSpatialFormat": "None",
+   "DisplayTitle": "240p H264 SDR",
+   "NalLengthSize": "4",
+   "IsInterlaced": false,
+   "IsAVC": true,
+   "BitRate": 512270,
+   "BitDepth": 8,
+   "RefFrames": 1,
+   "IsDefault": true,
+   "IsForced": false,
+   "IsHearingImpaired": false,
+   "IsOriginal": false,
+   "Height": 240,
+   "Width": 320,
+   "AverageFrameRate": 25,
+   "RealFrameRate": 25,
+   "ReferenceFrameRate": 25,
+   "Profile": "Constrained Baseline",
+   "Type": "Video",
+   "AspectRatio": "4:3",
+   "Index": 1,
+   "IsExternal": false,
+   "IsTextSubtitleStream": false,
+   "SupportsExternalStream": false,
+   "PixelFormat": "yuv420p",
+   "Level": 13,
+   "IsAnamorphic": false
+  },
+  {
+   "Codec": "aac",
+   "CodecTag": "mp4a",
+   "Language": "und",
+   "TimeBase": "1/48000",
+   "VideoRange": "Unknown",
+   "VideoRangeType": "Unknown",
+   "AudioSpatialFormat": "None",
+   "LocalizedDefault": "Default",
+   "LocalizedExternal": "External",
+   "LocalizedLanguage": "Undetermined",
+   "LocalizedOriginal": "Original",
+   "DisplayTitle": "AAC - Stereo - Default",
+   "IsInterlaced": false,
+   "ChannelLayout": "stereo",
+   "BitRate": 64170,
+   "Channels": 2,
+   "SampleRate": 48000,
+   "IsDefault": true,
+   "IsForced": false,
+   "IsHearingImpaired": false,
+   "IsOriginal": false,
+   "Profile": "LC",
+   "Type": "Audio",
+   "Index": 2,
+   "IsExternal": false,
+   "IsTextSubtitleStream": false,
+   "SupportsExternalStream": false
+  }
+ ],
+ "VideoType": "VideoFile",
+ "ImageTags": {
+  "Primary": "8f6527d1f9a3d57bc0538f74efbb2e5c",
+  "Logo": "884ef02cc3194a858027e6232111d4a2"
+ },
+ "BackdropImageTags": [
+  "862feb36469a5a8f40e070f5503b5707"
+ ],
+ "ImageBlurHashes": {
+  "Backdrop": {
+   "862feb36469a5a8f40e070f5503b5707": "WGDc2Kn$4:%fD%Rj?]WBR5ayiwt7Mxf6V@M|tQkCQno|ozRjx[Rj"
+  },
+  "Primary": {
+   "8f6527d1f9a3d57bc0538f74efbb2e5c": "dON,9r-ooJ_2~qtQxtxD9Gt6oeNGRkIVWBt7fiRkofw]"
+  },
+  "Logo": {
+   "884ef02cc3194a858027e6232111d4a2": "HISrrRt6fQt6fQt6fQt6fQ~Uj[fQj[fQj[fQj[fQ"
+  }
+ },
+ "Chapters": [],
+ "Trickplay": {},
+ "LocationType": "FileSystem",
+ "MediaType": "Video",
+ "LockedFields": [],
+ "LockData": false,
+ "Width": 320,
+ "Height": 240,
+ "OriginalLanguage": "zh"
+}

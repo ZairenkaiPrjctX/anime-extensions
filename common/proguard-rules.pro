@@ -30,3 +30,8 @@
 
 -if @kotlinx.serialization.Serializable class **
 -keep,allowshrinking,allowoptimization,allowobfuscation,allowaccessmodification class <1>
+
+# Injekt captures generic types through subclasses of FullTypeReference and reads them via
+# reflection (`Injekt.get<Application>()`); without these, R8 strips the type and the lookup fails
+# with "TypeReference constructed without actual type information".
+-keep class * extends uy.kohesive.injekt.api.FullTypeReference

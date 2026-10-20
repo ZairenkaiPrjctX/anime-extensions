@@ -21,7 +21,8 @@ that file, reads repository metadata from `repo.json` next to it, and downloads
 | `sources` | array  | non-empty; each `{name, lang, id, baseUrl}`                                      |
 
 Source `id` is a decimal string of a positive 64-bit integer, unique across the catalog; `baseUrl`
-must be `https` without credentials. `repo.json` is
+is either an `https` URL without credentials or `""` for sources whose server the user configures
+(the convention of the published ecosystem, e.g. Jellyfin). `repo.json` is
 `{"meta": {"name", "shortName", "website", "signingKeyFingerprint"}}`, where the fingerprint is the
 SHA-256 of the signing certificate; the app uses it to trust APKs from this repository.
 

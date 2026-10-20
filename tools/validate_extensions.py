@@ -36,6 +36,8 @@ REQUIRED_REPO_FILES = (
     "docs/COMPATIBILITY.md",
     "docs/DEVELOPMENT.md",
     "docs/DISTRIBUTION.md",
+    "docs/SOURCE_AUDIT.md",
+    "sources/registry.json",
 )
 
 TEMPLATE_MARKER = "ASE_TEMPLATE_UNIMPLEMENTED"

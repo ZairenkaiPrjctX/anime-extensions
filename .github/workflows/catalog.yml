@@ -85,6 +85,9 @@ jobs:
       - name: Validate catalog against this source tree
         run: python3 tools/validate_catalog.py "$RUNNER_TEMP/repo" --source-tree .
 
+      - name: Catalog contains exactly the registry's eligible sources
+        run: python3 tools/source_registry.py validate --catalog "$RUNNER_TEMP/repo/index.min.json"
+
       - name: Name artifact
         id: names
         env:

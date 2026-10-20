@@ -1,0 +1,61 @@
+{
+ "Items": [
+  {
+   "Name": "ASE Test Series",
+   "Id": "e719a78f051a1d4e47fe2faf2774e684",
+   "ChannelId": null,
+   "IsFolder": true,
+   "Type": "Series",
+   "UserData": {
+    "PlayedPercentage": 0,
+    "UnplayedItemCount": 4,
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684",
+    "ItemId": "e719a78f051a1d4e47fe2faf2774e684"
+   },
+   "AirDays": [],
+   "ImageTags": {},
+   "ImageBlurHashes": {},
+   "LocationType": "FileSystem",
+   "MediaType": "Unknown"
+  },
+  {
+   "Name": "The Conceited General",
+   "Id": "7eff97ff8df4ecfda1c1cfdab3315fb1",
+   "HasSubtitles": true,
+   "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "PremiereDate": "1956-05-08T00:00:00.0000000Z",
+   "ChannelId": null,
+   "CommunityRating": 6.077,
+   "RunTimeTicks": 14179600000,
+   "ProductionYear": 1956,
+   "IsFolder": false,
+   "Type": "Movie",
+   "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "7eff97ff-8df4-ecfd-a1c1-cfdab3315fb1",
+    "ItemId": "7eff97ff8df4ecfda1c1cfdab3315fb1"
+   },
+   "VideoType": "VideoFile",
+   "ImageTags": {
+    "Primary": "8f6527d1f9a3d57bc0538f74efbb2e5c"
+   },
+   "ImageBlurHashes": {
+    "Primary": {
+     "8f6527d1f9a3d57bc0538f74efbb2e5c": "dON,9r-ooJ_2~qtQxtxD9Gt6oeNGRkIVWBt7fiRkofw]"
+    }
+   },
+   "LocationType": "FileSystem",
+   "MediaType": "Video",
+   "OriginalLanguage": "zh"
+  }
+ ],
+ "TotalRecordCount": 2,
+ "StartIndex": 0
+}

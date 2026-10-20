@@ -1,0 +1,28 @@
+{
+ "Items": [
+  {
+   "Name": "ASE Test Series",
+   "Id": "e719a78f051a1d4e47fe2faf2774e684",
+   "ChannelId": null,
+   "IsFolder": true,
+   "Type": "Series",
+   "UserData": {
+    "PlayedPercentage": 0,
+    "UnplayedItemCount": 4,
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684",
+    "ItemId": "e719a78f051a1d4e47fe2faf2774e684"
+   },
+   "AirDays": [],
+   "ImageTags": {},
+   "ImageBlurHashes": {},
+   "LocationType": "FileSystem",
+   "MediaType": "Unknown"
+  }
+ ],
+ "TotalRecordCount": 2,
+ "StartIndex": 0
+}

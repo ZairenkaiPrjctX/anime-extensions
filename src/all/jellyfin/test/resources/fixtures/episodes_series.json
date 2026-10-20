@@ -1,0 +1,150 @@
+{
+ "Items": [
+  {
+   "Name": "ASE Test Series S01E01",
+   "Id": "300458a9371ec75d8987d9a88900c68b",
+   "DateCreated": "2026-10-20T15:59:33.9510998Z",
+   "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "ChannelId": null,
+   "RunTimeTicks": 40000000,
+   "IndexNumber": 1,
+   "ParentIndexNumber": 1,
+   "IsFolder": false,
+   "Type": "Episode",
+   "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684001001",
+    "ItemId": "300458a9371ec75d8987d9a88900c68b"
+   },
+   "SeriesName": "ASE Test Series",
+   "SeriesId": "e719a78f051a1d4e47fe2faf2774e684",
+   "SeasonId": "2ab3da062cf48b5d379d51723a83135c",
+   "SeasonName": "Season 1",
+   "VideoType": "VideoFile",
+   "ImageTags": {
+    "Primary": "21664ed422395b4939dba6dbf476246e"
+   },
+   "BackdropImageTags": [],
+   "ImageBlurHashes": {
+    "Primary": {
+     "21664ed422395b4939dba6dbf476246e": "V.KxMAIxoHK.bWt6i*R;S[k9n*VrskV]WCofW-oIjbaz"
+    }
+   },
+   "LocationType": "FileSystem",
+   "MediaType": "Video"
+  },
+  {
+   "Name": "ASE Test Series S01E02",
+   "Id": "1fcf85c08ca6f20c9e4ff98ca6d3c015",
+   "DateCreated": "2026-10-20T15:59:34.4910998Z",
+   "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "ChannelId": null,
+   "RunTimeTicks": 40000000,
+   "IndexNumber": 2,
+   "ParentIndexNumber": 1,
+   "IsFolder": false,
+   "Type": "Episode",
+   "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684001002",
+    "ItemId": "1fcf85c08ca6f20c9e4ff98ca6d3c015"
+   },
+   "SeriesName": "ASE Test Series",
+   "SeriesId": "e719a78f051a1d4e47fe2faf2774e684",
+   "SeasonId": "2ab3da062cf48b5d379d51723a83135c",
+   "SeasonName": "Season 1",
+   "VideoType": "VideoFile",
+   "ImageTags": {
+    "Primary": "9889b2df37f2d3ed7d20ead5ed85ceba"
+   },
+   "BackdropImageTags": [],
+   "ImageBlurHashes": {
+    "Primary": {
+     "9889b2df37f2d3ed7d20ead5ed85ceba": "V.KxMAIxoHK.bWt6i*R;S[k9n*VrskV]WCofW-oIjbaz"
+    }
+   },
+   "LocationType": "FileSystem",
+   "MediaType": "Video"
+  },
+  {
+   "Name": "ASE Test Series S02E01",
+   "Id": "b271705008f60837fbfc7b1a987687e1",
+   "DateCreated": "2026-10-20T15:59:35.0190998Z",
+   "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "ChannelId": null,
+   "RunTimeTicks": 40000000,
+   "IndexNumber": 1,
+   "ParentIndexNumber": 2,
+   "IsFolder": false,
+   "Type": "Episode",
+   "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684002001",
+    "ItemId": "b271705008f60837fbfc7b1a987687e1"
+   },
+   "SeriesName": "ASE Test Series",
+   "SeriesId": "e719a78f051a1d4e47fe2faf2774e684",
+   "SeasonId": "e22e813697c014b4a372fb324164b0b6",
+   "SeasonName": "Season 2",
+   "VideoType": "VideoFile",
+   "ImageTags": {
+    "Primary": "dbafd4195a635c598f55d86afae33e9a"
+   },
+   "BackdropImageTags": [],
+   "ImageBlurHashes": {
+    "Primary": {
+     "dbafd4195a635c598f55d86afae33e9a": "V.KxMAIxoHK.bWt6i*R;S[k9n*VrskV]WCofW-oIjbaz"
+    }
+   },
+   "LocationType": "FileSystem",
+   "MediaType": "Video"
+  },
+  {
+   "Name": "ASE Test Series S02E02",
+   "Id": "e6216bb362e62df404c7af64f4f4d3d1",
+   "DateCreated": "2026-10-20T15:59:35.4190998Z",
+   "Container": "mov,mp4,m4a,3gp,3g2,mj2",
+   "ChannelId": null,
+   "RunTimeTicks": 40000000,
+   "IndexNumber": 2,
+   "ParentIndexNumber": 2,
+   "IsFolder": false,
+   "Type": "Episode",
+   "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "e719a78f-051a-1d4e-47fe-2faf2774e684002002",
+    "ItemId": "e6216bb362e62df404c7af64f4f4d3d1"
+   },
+   "SeriesName": "ASE Test Series",
+   "SeriesId": "e719a78f051a1d4e47fe2faf2774e684",
+   "SeasonId": "e22e813697c014b4a372fb324164b0b6",
+   "SeasonName": "Season 2",
+   "VideoType": "VideoFile",
+   "ImageTags": {
+    "Primary": "ecd5f1e2e89aef4a0224d8089d18baf4"
+   },
+   "BackdropImageTags": [],
+   "ImageBlurHashes": {
+    "Primary": {
+     "ecd5f1e2e89aef4a0224d8089d18baf4": "V.KxMAIxoHK.bWt6i*R;S[k9n*VrskV]WCofW-oIjbaz"
+    }
+   },
+   "LocationType": "FileSystem",
+   "MediaType": "Video"
+  }
+ ],
+ "TotalRecordCount": 4,
+ "StartIndex": 0
+}

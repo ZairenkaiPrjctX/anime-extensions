@@ -120,6 +120,10 @@ class EntrySchemaTest(unittest.TestCase):
                 errors = " | ".join(validate_entries([self.entry(**overrides)]))
                 self.assertIn(fragment, errors)
 
+    def test_empty_base_url_marks_a_user_configured_source(self):
+        entry = self.entry(sources=[{"name": "Jellyfin", "lang": "all", "id": "1100359934660540567", "baseUrl": ""}])
+        self.assertEqual(validate_entries([entry]), [])
+
     def test_duplicates_across_entries(self):
         errors = " | ".join(validate_entries([self.entry(), self.entry()]))
         self.assertIn("duplicate package", errors)

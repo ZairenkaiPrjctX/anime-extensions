@@ -130,8 +130,9 @@ def validate_entries(entries: object) -> list[str]:
                 errors.append(f"{swhere}: duplicate source id (also used by {seen_ids[source['id']]})")
             else:
                 seen_ids[source["id"]] = entry["pkg"]
-            if not is_safe_https_url(source["baseUrl"]):
-                errors.append(f"{swhere}: 'baseUrl' must be an https URL without credentials")
+            # "" is the published convention for user-configured servers (e.g. Jellyfin).
+            if source["baseUrl"] != "" and not is_safe_https_url(source["baseUrl"]):
+                errors.append(f"{swhere}: 'baseUrl' must be empty (user-configured) or an https URL without credentials")
     return errors
 
 

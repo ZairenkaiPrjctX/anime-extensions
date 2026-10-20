@@ -30,6 +30,12 @@ jobs:
       - name: Validate extension metadata, docs and licensing files
         run: python3 tools/validate_extensions.py
 
+      - name: Validate source registry (statuses, evidence, module/test consistency)
+        run: python3 tools/source_registry.py validate
+
+      - name: Source audit document is generated from the registry
+        run: python3 tools/source_registry.py render --check
+
       - name: Module discovery yields at least one extension
         run: python3 tools/build_matrix.py --all
 

@@ -34,6 +34,7 @@ into an extension APK.
 | `template/extension/`        | Templates rendered by `tools/new_source.py`                                                |
 | `tools/`                     | Validation, matrix, catalog and scaffolding scripts (stdlib Python ≥ 3.12) + tests         |
 | `catalog/repo-meta.json`     | Repository display metadata for `repo.json`                                                 |
+| `sources/registry.json`      | Audit/discovery registry of every candidate source; rendered to `docs/SOURCE_AUDIT.md`      |
 | `.github/workflows/`         | `validate`, `build-extensions`, `catalog` (reusable), `release`                             |
 
 ## Extension module
@@ -86,14 +87,24 @@ In `src/all/internetarchive`:
 | `String/Response.parseAs<T>()`, `sourceJson`, `StringOrListSerializer` | Tolerant JSON decoding with contextual errors             |
 | `resolveUrl(base, href)`, `toSafeHttpsUrlOrNull()`      | URL normalization rejecting `javascript:`, `data:`, credentials     |
 | `htmlToText`, `naturalOrder`, `SimpleDateFormat.tryParse` | Description cleanup, episode ordering, dates (0 = unknown)        |
+| `AnimeSource.sourcePreferences()`                       | The app's per-source `SharedPreferences` (via Injekt; resolve lazily) |
 
 Rules: add to `core` only what at least one source uses; every public function has a unit test.
+
+## Registry and modules
+
+Discovery and implementation are separate. `sources/registry.json` records each candidate with
+category (requested site, A official platform, B metadata API, C user media server, D open
+collection, E community site), status, dated evidence, permission findings, capabilities and next
+action. `tools/source_registry.py validate` enforces that only READY/LIMITED entries name a module,
+that every module has such an entry with tests and fixtures and the repository lib level, and (with
+`--catalog`) that the published catalog contains exactly those modules.
 
 ## Themes and libs
 
 `ase.multisrc` and `ase.library` exist so that shared CMS logic can be added without build changes,
-but no theme or lib exists yet: there is only one source, and sites must be shown to share markup
-or API contracts (not just look similar) before a theme is justified.
+but no theme or lib exists yet: the two sources use unrelated APIs, and sites must be shown to share
+markup or API contracts (not just look similar) before a theme is justified.
 
 ## Error semantics
 

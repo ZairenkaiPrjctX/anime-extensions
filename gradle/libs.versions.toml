@@ -23,6 +23,7 @@ junit = { module = "junit:junit", version.ref = "junit" }
 
 # Provided at runtime by the host app (Anikku/Aniyomi): always compileOnly in extensions.
 aniyomi-lib = { module = "com.github.komikku-app:aniyomi-extensions-lib", version = "f5961b5dfb" }
+injekt-core = { module = "com.github.null2264.injekt:injekt-core", version = "4135455a2a" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 jsoup = { module = "org.jsoup:jsoup", version = "1.22.1" }
 kotlin-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
@@ -38,4 +39,4 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 
 [bundles]
 # Everything the host app provides to extensions at runtime.
-provided = ["aniyomi-lib", "coroutines-core", "jsoup", "kotlin-json", "okhttp"]
+provided = ["aniyomi-lib", "coroutines-core", "injekt-core", "jsoup", "kotlin-json", "okhttp"]
